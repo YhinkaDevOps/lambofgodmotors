@@ -15,14 +15,10 @@ const Navbar = () => {
           <Link href="/">
             <button className="hover:opacity-70 flex items-center flex-shrink-0">
               <img
-                src="/assets/ck.png"
-                className="h-[65px]"
+                src="/assets/nav-logo.png"
+                className="h-[40px] md:h-[65px]"
                 alt="Navigation_logo"
               />
-
-              <span className="hidden md:block font-bold">
-                Chimkasimma Transport Services
-              </span>
             </button>
           </Link>
 
@@ -32,18 +28,18 @@ const Navbar = () => {
                 <Link href="/">Home</Link>
               </li>
               <li className="text-black font-medium hover:text-gray-300">
-                <Link href="#">Booking</Link>
+                <Link href="/about">About</Link>
               </li>
               <li className="text-black font-medium hover:text-gray-300">
                 <Link href="/terminals">Terminals</Link>
               </li>
               <li className="text-black font-medium hover:text-gray-300">
-                <Link href="/contact">Contact Us</Link>
+                <Link href="/contact-us">Contact Us</Link>
               </li>
             </ul>
           </div>
 
-          <div className="flex items-center p-2 rounded-md focus:outline-none md:hidden">
+          <div className="flex items-center p-2 rounded-md focus:outline-none md:hidden border-2 border-[#333663]">
             <button onClick={handleClick} className="">
               {isClick ? <FaTimes size={30} /> : <FaBars size={30} />}
             </button>
@@ -53,20 +49,20 @@ const Navbar = () => {
 
       <div>
         {isClick && (
-          <div className="bg-[#333663] md:hidden">
+          <div className="nav-bg md:hidden">
             <div className="px-2 pt-2 pb-2 space-y-1 sm:px-3">
               <ul className="list-none space-y-2">
                 <li className="text-white hover:bg-white font-medium hover:text-black rounded-lg p-2">
                   <Link href="/">Home</Link>
                 </li>
                 <li className="text-white hover:bg-white font-medium hover:text-black rounded-lg p-2">
-                  <Link href="#">Booking</Link>
+                  <Link href="/about">About</Link>
                 </li>
                 <li className="text-white hover:bg-white font-medium hover:text-black rounded-lg p-2">
                   <Link href="/terminals">Terminals</Link>
                 </li>
                 <li className="text-white hover:bg-white font-medium hover:text-black rounded-lg p-2">
-                  <Link href="/contact">Contact Us</Link>
+                  <Link href="/contact-us">Contact Us</Link>
                 </li>
               </ul>
             </div>

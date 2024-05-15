@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import ModalForm from "../../components/Modal"
 import {
   Textarea,
@@ -24,96 +25,37 @@ const Terminal = () => {
   // const initialRef = React.useRef(null);
 
   return (
-    <div className="min-h-screen bg-[#f4f5f7] px-2 md:px-0 py-16">
-      <div className="text-center mb-12 pt-24 ">
-        <p className="text-4xl font-bold inline border-b-4 border-pink-600 text-black">
-          Bus Terminals
-        </p>
+    <div className="min-h-screen bg-[#f4f5f7] px-2 md:px-0 pt-20 pb-16">
+      <div className="about-bg text-white bg-[#f6f6f6] py-12 px-4 md:py-16 md:px-[20px] lg:px-[50px] xl:px-[130px] flex flex-col gap-7 ">
+        <h6 className="text-center text-5xl font-semibold px-2">TERMINAL</h6>
+        <span className="flex gap-x-3 items-center px-2">
+          <Link className="hover:text-[#900C3F]" href="/">
+            Home
+          </Link>
+          /<span className="font-semibold">Terminal</span>
+        </span>
       </div>
 
       {/* Aba Terminal  */}
       <div className="border-animate__animated animate__fadeInLeft md:border-t md:border-b border-black mt-10 mx-auto max-w-[900px] w-full grid sm:grid-cols-2 gap-2 p-1 md:p-4 text-white">
         <div className="hidden md:block">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.9456829141236!2d7.371445!3d5.112457399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10429947b8195601%3A0x82f1b7c2fbf35653!2s2%20Milverton%20Rd%2C%20Aba%2C%20450101%2C%20Abia!5e0!3m2!1sen!2sng!4v1705232983315!5m2!1sen!2sng"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4894553503186!2d3.2095465736493427!3d6.4595008239065255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b86f36c73e4e1%3A0x1b8a0e2068cb014f!2sVolks%20Bus%20Stop!5e0!3m2!1sen!2sng!4v1715731120543!5m2!1sen!2sng"
             width="400"
             height="300"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div className="aba-bg content-div bg-[#91add3] shadow-lg shadow-[#040c16] rounded-md p-20 md:p-5 flex flex-col gap-2 ">
-          <div className="hover:opacity-100">
-            <h4 className="font-bold text-2xl text-white">Abia Terminal</h4>
-            <div className=" text-white">No 2 Milverton Aba, Abia State</div>
-            <Button onClick={onOpen} mt={4}>
-              Book Now
-            </Button>
-          </div>
-          <Modal isOpen={isOpen} onClose={onClose}>
-            <ModalOverlay />
-            <ModalContent>
-              <ModalHeader>Booking Form</ModalHeader>
-              <ModalCloseButton />
-              <ModalBody pb={6}>
-                <FormControl isRequired>
-                  <FormLabel>Full Name:</FormLabel>
-                  <Input placeholder="Full name" type="text" name="name" />
-                  <FormErrorMessage>Required</FormErrorMessage>
-                </FormControl>
-
-                <FormControl mt={4} isRequired>
-                  <FormLabel>Contact Number:</FormLabel>
-                  <Input
-                    placeholder="Contact Mumber"
-                    type="number"
-                    name="contact"
-                  />
-                </FormControl>
-                <FormControl mt={4} isRequired>
-                  <FormLabel>Departure Location:</FormLabel>
-                  <Input
-                    placeholder="Departure Location"
-                    type="text"
-                    name="departure"
-                  />
-                </FormControl>
-                <FormControl mt={4} isRequired>
-                  <FormLabel> Destination:</FormLabel>
-                  <Input
-                    placeholder="Destination"
-                    type="text"
-                    name="departure"
-                  />
-                </FormControl>
-                <FormControl mt={4} isRequired>
-                  <FormLabel> Number of Passengers:</FormLabel>
-                  <Input
-                    placeholder="Number of Passengers"
-                    type="number"
-                    name="passangers"
-                  />
-                </FormControl>
-                <FormControl mt={4}>
-                  <FormLabel>
-                    Additional Comments or Special Requests:
-                  </FormLabel>
-                  <Textarea
-                    type="text"
-                    name="comments"
-                    rows={4}
-                    placeholder="Comments"
-                  />
-                </FormControl>
-              </ModalBody>
-
-              <ModalFooter>
-                <Button colorScheme="red" mr={5}>
-                  Submit Booking
-                </Button>
-              </ModalFooter>
-            </ModalContent>
-          </Modal>
+        <div className=" terminal-bg rounded-md p-10 md:p-5 flex flex-col gap-2 ">
+          <h5 className="text-black font-bold text-2xl">Mile 2 Terminal</h5>
+          <p className="text-black font-semibold">
+            KM 10, Badagry Express Road, Mile 2, Volks Busstop, Lagos State
+          </p>
+          <p className=" text-[#333333]">08027200405</p>
+          <p className=" text-[#333333]">07035356518</p>
+          <p className=" text-[#333333]">08067197584</p>
+          <p className=" text-[#333333]">08122912129</p>
         </div>
       </div>
 
@@ -121,7 +63,7 @@ const Terminal = () => {
       <div className="animate__animated animate__fadeInLeft md:border-t md:border-b border-black mt-5 md:mt-10 mx-auto max-w-[900px] w-full grid sm:grid-cols-2 gap-2 p-1 md:p-4 text-white">
         <div className="hidden md:block">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.29857279163!2d3.299496311291875!3d6.462894645359911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b899fd586f543%3A0x50db5915de1d275e!2sTransport%20Company%20Of%20Anambra%20State%20Ltd.%20(TRACAS)!5e0!3m2!1sen!2sng!4v1705237797468!5m2!1sen!2sng"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.4630647162944!2d5.617897467832687!3d6.334007711343392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1040d3a064900d6d%3A0xab2fa08226fa6738!2sRing%20Road%20Bus%20Terminal!5e0!3m2!1sen!2sng!4v1715731257096!5m2!1sen!2sng"
             width="400"
             height="300"
             loading="lazy"
@@ -129,16 +71,13 @@ const Terminal = () => {
           ></iframe>
         </div>
 
-        <div className="festac-bg content-div bg-[#91add3] shadow-lg shadow-[#040c16] rounded-md p-20 md:p-5 flex flex-col gap-2 ">
-          <div className="hover:opacity-100">
-            <h4 className="font-bold text-2xl text-white">Lagos Terminal</h4>
-            <div className="font-semibold text-white">
-              1st Avenue Festac, beside Tracas Festac Town, Lagos State
-            </div>
-            <Button onClick={onOpen} mt={4}>
-              Book Now
-            </Button>
-          </div>
+        <div className=" terminal-bg rounded-md p-10 md:p-5 flex flex-col gap-2 ">
+          <h5 className="text-black font-bold text-2xl">Benin City Terminal</h5>
+          <p className="text-black font-semibold">
+            Ring Road, Opp. Oba Market, Benin City, Edo State
+          </p>
+          <p className=" text-[#333333]">08185769804</p>
+          <p className=" text-[#333333]">07060658643</p>
         </div>
       </div>
 
@@ -146,7 +85,7 @@ const Terminal = () => {
       <div className="animate__animated animate__fadeInLeft md:border-t md:border-b border-black mt-5 md:mt-10 mx-auto max-w-[900px] w-full grid sm:grid-cols-2 gap-2 p-1 md:p-4 text-white">
         <div className="hidden md:block">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1969.9877705386!2d7.438345349759049!3d9.065992450270045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cfd8e4fb2e13%3A0xdaeb920ed74f07a8!2sI-Mirror%20Global%20Consult!5e0!3m2!1sen!2sng!4v1705798426777!5m2!1sen!2sng"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9421462454743!2d6.745860867822047!3d6.138475013951003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104393338f8a024b%3A0x43f6bc8ced29041!2sGod%20Is%20Good%20Motors%20Nigeria%20Limited!5e0!3m2!1sen!2sng!4v1715731512438!5m2!1sen!2sng"
             width="400"
             height="300"
             loading="lazy"
@@ -154,16 +93,14 @@ const Terminal = () => {
           ></iframe>
         </div>
 
-        <div className="abuja-bg content-div bg-[#91add3] shadow-lg shadow-[#040c16] rounded-md p-20 md:p-5  flex flex-col gap-2 ">
-          <div className="hover:opacity-100">
-            <h4 className="font-bold text-2xl text-white">Abuja Terminal</h4>
-            <div className="font-semibold text-white">
-              Plot 1127 A.E Ekukinam street, Utako, Abuja
-            </div>
-            <Button onClick={onOpen} mt={4}>
-              Book Now
-            </Button>
-          </div>
+        <div className=" terminal-bg rounded-md p-10 md:p-5 flex flex-col gap-2 ">
+          <h5 className="text-black font-bold text-2xl">Asaba Terminal</h5>
+          <p className="text-black font-semibold">
+            Opp. God is Good Motors, Before the Onitsha Head Bridge, Asaba,
+            Delta State
+          </p>
+          <p className=" text-[#333333]">08132666710</p>
+          <p className=" text-[#333333]">08024008830</p>
         </div>
       </div>
 
@@ -171,7 +108,7 @@ const Terminal = () => {
       <div className="animate__animated animate__fadeInLeft md:border-t md:border-b border-black mt-5 md:mt-10 mx-auto max-w-[900px] w-full grid sm:grid-cols-2 gap-2 p-1 md:p-4 text-white">
         <div className="hidden md:block">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.672867952885!2d7.487921474992175!3d6.436046193555127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1044a17d1a08ca13%3A0xc26b371941d53399!2s7%20Market%20Rd%2C%20Ogui%2C%20Enugu%20400102%2C%20Enugu!5e0!3m2!1sen!2sng!4v1705799959234!5m2!1sen!2sng"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.108211301131!2d5.771873796599013!3d5.527689563200889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041b3fce5706acb%3A0xd1e376d64c2038e2!2sEdewor%20Shopping%20Center!5e0!3m2!1sen!2sng!4v1715731759479!5m2!1sen!2sng"
             width="400"
             height="300"
             loading="lazy"
@@ -179,16 +116,15 @@ const Terminal = () => {
           ></iframe>
         </div>
 
-        <div className="enugu-bg content-div bg-[#91add3] shadow-lg shadow-[#040c16] rounded-md p-20 md:p-5 flex flex-col gap-2 ">
-          <div className="hover:opacity-100">
-            <h4 className="font-bold text-2xl text-white">Enugu Terminal</h4>
-            <div className="font-semibold text-white">
-              No. 7, market road, Mgbemena park ogui, Enugu
-            </div>
-            <Button onClick={onOpen} mt={4}>
-              Book Now
-            </Button>
-          </div>
+        <div className=" terminal-bg rounded-md p-10 md:p-5 flex flex-col gap-2 ">
+          <h5 className="text-black font-bold text-2xl">Warri Terminal</h5>
+          <p className="text-black font-semibold">
+            Edewor Complex by Enere Junction, Warri, Delta State
+          </p>
+          <p className=" text-[#333333]">07015235913</p>
+          <p className=" text-[#333333]">09030883728</p>
+          <p className=" text-[#333333]">08038893954</p>
+          <p className=" text-[#333333]">08033531681</p>
         </div>
       </div>
     </div>

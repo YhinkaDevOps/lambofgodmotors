@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
 import Services from "@/components/Services";
+import Choose from "@/components/Choose";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <About />
       <Gallery />
+      <Choose />
       <Testimonials />
       <Services />
     </div>

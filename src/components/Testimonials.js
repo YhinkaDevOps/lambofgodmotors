@@ -1,18 +1,23 @@
-import React from 'react'
+"use client";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 const Testimonials = () => {
   return (
     <div className="w-full min-h-[500px] py-10 bg-[#f4f5f7] text-black ">
       <div className="text-center mb-10">
-        <p className="text-4xl font-bold inline border-b-4 border-pink-600 text-black">
-          Testimonials
-        </p>
-        <p className="text-xl text-[#71717a] mt-3">
+        <p className="text-4xl text-[#71717a] mt-3">
           What our customers say about us
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mx-auto max-w-[1100px] p-2 ">
-        <div className="bg-[#333663] shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto p-4">
+        <div className="testimonial-bg shadow-lg group container rounded-md flex justify-center items-center mx-auto p-4">
           <div>
             <p className="text-justify text-white">
               "As a frequent traveler, I've experienced various transportation
@@ -24,47 +29,40 @@ const Testimonials = () => {
               service.
             </p>
             <p className="mt-4 text-center font-semibold text-white">
-              Patric Stevens
+              Emeka Madueke
             </p>
           </div>
         </div>
-        <div className="bg-[#333663] shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto p-4">
+        <div className="testimonial-bg shadow-lg  group container rounded-md flex justify-center items-center mx-auto p-4">
           <div>
             <p className="text-justify text-white">
-              "I rely on Chimkasimma Transport Services for my business's
-              corporate travel needs, and they never disappoint. The
-              professionalism and reliability they exhibit make them an ideal
-              choice. From coordinating group travel for our team to providing
-              executive transportation for clients, Chimkasimma ensures a smooth
-              and comfortable ride every time. Their dedication to excellence
-              has made them an indispensable partner in our corporate travel
-              strategy."
+              "As a frequent traveler between Warri and Benin City, I rely on
+              Lamb of God Motors for their efficient and punctual services.
+              Their dedication to quality and their use of technology make
+              booking and traveling with them a breeze. I trust Lamb of God
+              Motors for a smooth and enjoyable travel experience every time."
             </p>
             <p className="mt-4 text-center font-semibold text-white">
-              Olayinka Adams
+              Abiodun Animashaun
             </p>
           </div>
         </div>
-        <div className="bg-[#333663] shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto p-4">
+        <div className="testimonial-bg shadow-lg  group container rounded-md flex justify-center items-center mx-auto p-4">
           <div>
             <p className="text-justify text-white">
-              "Chimkasimma Transport Services has been my go-to choice for
-              inter-state travel. The punctuality, professionalism, and comfort
-              they provide make every journey a delight. Their modern fleet,
-              coupled with courteous staff, ensures a seamless and enjoyable
-              travel experience. I highly recommend Chimkasimma for anyone
-              seeking reliable and top-notch transportation services. Traveling
-              with them is not just a commute; it's a stress-free and enjoyable
-              experience.""
+              "Lamb of God Motors has been my go-to transport service for
+              inter-state travel in Nigeria. Their commitment to reliability and
+              exceptional customer service is unmatched. I always feel safe and
+              comfortable during my journeys with them. Highly recommended!"
             </p>
             <p className="mt-4 text-center font-semibold text-white">
-              Akeh Micheal
+              Temiloluwa Victoria
             </p>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Testimonials
+export default Testimonials;
