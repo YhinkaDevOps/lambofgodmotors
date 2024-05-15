@@ -25,7 +25,7 @@ const Footer = () => {
           {/* <span className="text-sm">
             https://chimkasimmatransportservices.vercel.app/
           </span> */}
-          <Link href="/contact">
+          <Link href="/contact-us">
             <button className="hover:opacity-70 text-sm flex items-center flex-shrink-0 hover:underline">
               Contact Us
             </button>
