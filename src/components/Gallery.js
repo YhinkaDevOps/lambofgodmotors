@@ -1,8 +1,11 @@
 "use client";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import successemail from "../../public/assets/success.gif";
 import { useForm, ValidationError } from "@formspree/react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   Textarea,
   FormErrorMessage,
@@ -24,20 +27,14 @@ const Gallery = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [state, handleSubmit] = useForm("xwkgzdde");
-  if (state.succeeded) {
-    return (
-      <div className="hero-image service-header contact-form-bg font-bold flex flex-col gap-5 justify-center items-center min-h-[600px] md:min-h-screen">
-        <span className="rounded">
-          <Image src={successemail} width={100} height={100} alt="email" />
-        </span>
 
-        <h4 className="text-3xl text-center text-white">Booking Successful</h4>
-        <button className="text-white px-7 py-3 rounded-md bg-red-600 hover:bg-orange-600 transition duration-300 ease-in-out">
-          <Link href="/">Home</Link>
-        </button>
-      </div>
-    );
-  }
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success("Booking Successful!");
+    } else {
+      toast.error("Booking error!!!");
+    }
+  }, [state.succeeded]);
 
   return (
     <div className="w-full min-h-[250px] py-16 bg-[#313131] [#f4f5f7] text-black">
@@ -92,7 +89,12 @@ const Gallery = () => {
                 Book Now
               </Button>
             </div>
-            <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={false}>
+            <Modal
+              isOpen={isOpen}
+              onClose={onClose}
+              blockScrollOnMount={false}
+              isCentered
+            >
               <ModalOverlay />
               <ModalContent>
                 <ModalHeader>
@@ -196,11 +198,10 @@ const Gallery = () => {
                         className="px-7 py-3 rounded-md border-[1px] border-[#000000] hover:bg-orange-600 hover:text-white transition duration-300 ease-in-out"
                         type="submit"
                         disabled={state.submitting}
-                        // onClick={notify}
                       >
                         Book Now
                       </button>
-                      {/* <ToastContainer /> */}
+                      <ToastContainer />
                     </form>
                   </div>
                 </ModalBody>
