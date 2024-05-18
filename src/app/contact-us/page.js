@@ -6,10 +6,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("mbjnqkba");
+  const [state, handleSubmit] = useForm("xwkgzdde");
   if (state.succeeded) {
     return (
-      <div className="products-bg service-header contact-form-bg font-bold flex flex-col gap-5 justify-center items-center min-h-[600px] md:min-h-screen">
+      <div className="hero-image service-header contact-form-bg font-bold flex flex-col gap-5 justify-center items-center min-h-[600px] md:min-h-screen">
         <span className="rounded">
           <Image src={emailsent} width={100} height={100} alt="email" />
         </span>
@@ -93,7 +93,7 @@ const Contact = () => {
 
           <h3 className="text-[#000000] text-2xl font-semibold">Email Us</h3>
           <div>
-            <p>sales@houseofflourish.com.ng</p>
+            <p>lambofgodmotors.limited@gmail.com</p>
           </div>
         </div>
       </div>
