@@ -17,7 +17,7 @@ const Hero = () => {
     <div className="hero-image min-h-screen">
       <div className="bg-text mt-24 md:mt-28">
         <div className="flex  flex-col gap-10 md:px-10">
-          <div className="flex flex-col space-y-6 md:space-y-5 text-black">
+          <div className="flex flex-col space-y-8 md:space-y-5 text-black">
             <h4 className="text-center ">
               <span className="flex flex-col gap-2 bowlby-one-regular text-3xl">
                 <span className="text-white"> Welcome To</span>
@@ -47,7 +47,7 @@ const Hero = () => {
 
             <div className="flex justify-center items-center">
               <Link href="/about">
-                <button className="text-white text-sm hover:opacity-70 bg-[#002244] rounded-md px-6 py-3">
+                <button className="text-white text-sm hover:opacity-70 bg-[#002244] rounded-md px-9 py-3">
                   Learn More
                 </button>
               </Link>
