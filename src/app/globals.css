@@ -171,6 +171,12 @@ select {
   object-fit: cover;
 }
 
+.choose-image{
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
 .testimonial-bg {
   background: rgb(23, 47, 164);
   background: radial-gradient(

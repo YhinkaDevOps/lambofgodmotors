@@ -1,4 +1,6 @@
 "use client";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -24,6 +26,10 @@ import {
 } from "@chakra-ui/react";
 
 const Gallery = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [state, handleSubmit] = useForm("xwkgzdde");
@@ -40,43 +46,28 @@ const Gallery = () => {
     <div className="w-full min-h-[250px] py-16 bg-[#313131] [#f4f5f7] text-black">
       <div className="mx-auto max-w-[1100px] flex flex-col my-5 px-4 gap-10">
         <div className="text-white flex flex-col gap-6">
-          <h1 className="font-bold text-4xl">Competitive Trip Rates</h1>
-          <p className="text-lg font-semibold">
+          <h1
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            className="font-bold text-4xl"
+          >
+            Competitive Trip Rates
+          </h1>
+          <p
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            className="text-lg font-semibold"
+          >
             Expanding routes with the most competitive fares.
           </p>
         </div>
 
-        {/* <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper bg-[#f7f7f7]"
-        >
-          <SwiperSlide className="swiper-slide">
-            <div className="shadow-lg shadow-[#040c16] rounded-md p-20 md:p-5 flex flex-col gap-2 "></div>
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <div className="shadow-lg shadow-[#040c16] rounded-md p-20 md:p-5 flex flex-col gap-2 "></div>
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <div className="shadow-lg shadow-[#040c16] rounded-md p-20 md:p-5 flex flex-col gap-2 "></div>
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <img src="/assets/picture_4.jpg" alt="" />
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <img src="/assets/picture_5.jpg" alt="" />
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <img src="/assets/picture_6.jpg" alt="" />
-          </SwiperSlide>
-        </Swiper> */}
-
         <div className="grid gap-8 md:gap-5 grid-cols-1 md:grid-cols-4 p-1 bg-[#f7f7f7] rounded-md">
-          <div className="shadow-lg shadow-[#040c16] rounded flex flex-col gap-2 ">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1600"
+            className="shadow-lg shadow-[#040c16] rounded flex flex-col gap-2 "
+          >
             <img
               src="/assets/lagos-bg.jpeg"
               alt="booking"
@@ -209,7 +200,11 @@ const Gallery = () => {
             </Modal>
           </div>
 
-          <div className="shadow-lg shadow-[#040c16] rounded flex flex-col gap-2 ">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1650"
+            className="shadow-lg shadow-[#040c16] rounded flex flex-col gap-2 "
+          >
             <img
               src="/assets/benin-bg.jpeg"
               alt="booking"
@@ -346,7 +341,11 @@ const Gallery = () => {
             </Modal>
           </div>
 
-          <div className="shadow-lg shadow-[#040c16] rounded flex flex-col gap-2 ">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1700"
+            className="shadow-lg shadow-[#040c16] rounded flex flex-col gap-2 "
+          >
             <img
               src="/assets/onitsha-bg.jpeg"
               alt="booking"
@@ -483,7 +482,11 @@ const Gallery = () => {
             </Modal>
           </div>
 
-          <div className="shadow-lg shadow-[#040c16] rounded flex flex-col gap-2 ">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1750"
+            className="shadow-lg shadow-[#040c16] rounded flex flex-col gap-2 "
+          >
             <img
               src="/assets/warri-bg.jpeg"
               alt="booking"

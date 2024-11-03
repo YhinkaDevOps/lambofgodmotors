@@ -1,24 +1,26 @@
 "use client";
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Testimonials = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full min-h-[500px] py-10 bg-[#f4f5f7] text-black ">
-      <div className="text-center mb-10">
+      <div
+        data-aos="flip-right"
+        data-aos-duration="1900"
+        className="text-center mb-10"
+      >
         <p className="text-4xl text-[#71717a] mt-3">
           What our customers say about us
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mx-auto max-w-[1100px] p-2 ">
-        <div className="testimonial-bg shadow-lg group container rounded-md flex justify-center items-center mx-auto p-4">
-          <div>
+        <div className="bg-[#002244] shadow-lg group container rounded-md flex justify-center items-center mx-auto p-4">
+          <div data-aos="flip-right" data-aos-duration="1900">
             <p className="text-justify text-white">
               "As a frequent traveler, I've experienced various transportation
               services, but Chimkasimma Transport Services stands out. Their
@@ -33,8 +35,8 @@ const Testimonials = () => {
             </p>
           </div>
         </div>
-        <div className="testimonial-bg shadow-lg  group container rounded-md flex justify-center items-center mx-auto p-4">
-          <div>
+        <div className="bg-[#002244] shadow-lg  group container rounded-md flex justify-center items-center mx-auto p-4">
+          <div data-aos="flip-right" data-aos-duration="1900">
             <p className="text-justify text-white">
               "As a frequent traveler between Warri and Benin City, I rely on
               Lamb of God Motors for their efficient and punctual services.
@@ -47,8 +49,8 @@ const Testimonials = () => {
             </p>
           </div>
         </div>
-        <div className="testimonial-bg shadow-lg  group container rounded-md flex justify-center items-center mx-auto p-4">
-          <div>
+        <div className="bg-[#002244] shadow-lg  group container rounded-md flex justify-center items-center mx-auto p-4">
+          <div data-aos="flip-right" data-aos-duration="1900">
             <p className="text-justify text-white">
               "Lamb of God Motors has been my go-to transport service for
               inter-state travel in Nigeria. Their commitment to reliability and
