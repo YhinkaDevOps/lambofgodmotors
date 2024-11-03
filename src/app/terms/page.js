@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div className="min-h-svh pt-[79px]">
       <div className="about-bg text-white bg-[#f6f6f6] py-12 px-4 md:py-16 md:px-[20px] lg:px-[50px] xl:px-[130px] flex flex-col gap-7 ">
-        <h6 className="text-center text-3xl md:text-5xl font-semibold px-2 uppercase">
+        <h6 className="text-center text-2xl md:text-5xl font-semibold px-2 uppercase">
           Terms and Conditions
         </h6>
         <span className="flex gap-x-3 items-center px-2">

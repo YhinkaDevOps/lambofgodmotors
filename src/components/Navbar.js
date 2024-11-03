@@ -49,21 +49,30 @@ const Navbar = () => {
 
       <div>
         {isClick && (
-          <div className="nav-bg md:hidden">
-            <div className="px-2 pt-2 pb-2 space-y-1 sm:px-3">
+          <div className="bg-black md:hidden">
+            <div className="px-2 py-4 space-y-1 sm:px-3">
               <ul className="list-none space-y-2">
-                <li className="text-white hover:bg-white font-medium hover:text-black rounded-lg p-2">
-                  <Link href="/">Home</Link>
-                </li>
-                <li className="text-white hover:bg-white font-medium hover:text-black rounded-lg p-2">
-                  <Link href="/about">About</Link>
-                </li>
-                <li className="text-white hover:bg-white font-medium hover:text-black rounded-lg p-2">
-                  <Link href="/terminals">Terminals</Link>
-                </li>
-                <li className="text-white hover:bg-white font-medium hover:text-black rounded-lg p-2">
-                  <Link href="/contact-us">Contact Us</Link>
-                </li>
+                <Link href="/">
+                  <li className="text-center text-white hover:bg-white font-medium hover:text-black rounded-lg p-2">
+                    Home
+                  </li>
+                </Link>
+                <Link href="/about">
+                  <li className="text-center text-white hover:bg-white font-medium hover:text-black rounded-lg p-2">
+                    About
+                  </li>
+                </Link>
+                <Link href="/terminals">
+                  <li className="text-center text-white hover:bg-white font-medium hover:text-black rounded-lg p-2">
+                    Terminals
+                  </li>
+                </Link>
+                <Link href="/contact-us">
+                  {" "}
+                  <li className="text-center text-white hover:bg-white font-medium hover:text-black rounded-lg p-2">
+                    Contact Us
+                  </li>
+                </Link>
               </ul>
             </div>
           </div>
