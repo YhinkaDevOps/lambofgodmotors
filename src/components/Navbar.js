@@ -22,18 +22,18 @@ const Navbar = () => {
             </button>
           </Link>
 
-          <div className="hidden md:block">
+          <div className="hidden md:block nav-text font-semibold">
             <ul className="nav-list flex gap-x-9 items-center text-base ">
-              <li className="text-black font-medium hover:text-gray-300">
+              <li className="text-[#808080]  hover:text-[#1d1160] ">
                 <Link href="/">Home</Link>
               </li>
-              <li className="text-black font-medium hover:text-gray-300">
+              <li className="text-[#808080]  hover:text-[#1d1160] ">
                 <Link href="/about">About</Link>
               </li>
-              <li className="text-black font-medium hover:text-gray-300">
+              <li className="text-[#808080]  hover:text-[#1d1160] ">
                 <Link href="/terminals">Terminals</Link>
               </li>
-              <li className="text-black font-medium hover:text-gray-300">
+              <li className="text-[#808080]  hover:text-[#1d1160] ">
                 <Link href="/contact-us">Contact Us</Link>
               </li>
             </ul>

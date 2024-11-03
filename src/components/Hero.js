@@ -1,24 +1,57 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Hero = () => {
+  const [text] = useTypewriter({
+    words: [
+      "Smooth Inter-State Travel",
+      "Redefined Urban Transit",
+      "Easy, Effortless Mobility",
+    ],
+    loop: 0,
+  });
+
   return (
     <div className="hero-image min-h-screen">
-      <div className="bg-text mt-28">
-        <div className="flex flex-col gap-8 text-center">
-          <h4 className="animate__animated animate__backInLeft text-4xl md:text-6xl font-bold leading-[70px] font-sans">
-            Efficient urban commuting reimagined
-          </h4>
+      <div className="bg-text mt-24 md:mt-28">
+        <div className="flex  flex-col gap-10 md:px-10">
+          <div className="flex flex-col space-y-6 md:space-y-5 text-black">
+            <h4 className="text-center ">
+              <span className="flex flex-col gap-2 bowlby-one-regular text-3xl">
+                <span className="text-white"> Welcome To</span>
+                <span className="border-text text-center mx-auto"></span>
+              </span>
+            </h4>
 
-          <p className="animate__animated animate__backInRight font-sans text-xl">
-            Welcome to LOGM, your gateway to seamless inter-state transport
-            services, connecting commuters across Nigeria with effortless
-            mobility
-          </p>
-          <div className="animate__animated animate__animated">
-            <button className=" text-white font-medium text-sm hover:opacity-70 bg-[#4175fc] rounded-l-[100px] rounded-r-[100px] px-8 py-3 transition duration-300 ease-in-out">
-              <Link href="/about">Learn More</Link>
-            </button>
+            <h5 className="text-white text-3xl md:text-6xl flex gap-5 justify-center items-center">
+              LAMB OF GOD MOTORS
+            </h5>
+            <h1
+              className="text-white md:text-3xl"
+              style={{
+                paddingTop: "1rem",
+                margin: "auto 0",
+                fontWeight: "bold",
+              }}
+            >
+              <span
+                className="uppercase"
+                style={{ color: "#c1121f", fontWeight: "bold" }}
+              >
+                {text}
+              </span>
+              <Cursor cursorColor="red" />
+            </h1>
+
+            <div className="flex justify-center items-center">
+              <Link href="/about">
+                <button className="text-white text-sm hover:opacity-70 bg-[#002244] rounded-md px-6 py-3">
+                  Learn More
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
