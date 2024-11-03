@@ -10,11 +10,7 @@ const Choose = () => {
   return (
     <div className="w-full min-h-[250px] py-16 [#f4f5f7] text-black">
       <div className="mx-auto max-w-[1100px] grid grid-cols-1 md:grid-cols-3 my-5 px-4 gap-10">
-        <div
-          className="about-image"
-          data-aos="flip-right"
-          data-aos-duration="1700"
-        >
+        <div data-aos="flip-right" data-aos-duration="1700">
           <h4 className="font-bold text-2xl text-[#444444] text-start md:text-end">
             WHY CHOOSE
           </h4>
