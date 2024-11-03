@@ -19,7 +19,9 @@ const Footer = () => {
             </button>
 
             <div>
-              <p>kM 10, Badagry Expressway, Mile 2, Lagos, Nigeria</p>
+              <p>
+                KM 10, Badagry Express Road, Mile 2, Volks Busstop, Lagos State
+              </p>
             </div>
           </div>
 

@@ -37,10 +37,11 @@ const Gallery = () => {
   useEffect(() => {
     if (state.succeeded) {
       toast.success("Booking Successful!");
+      onClose();
     } else {
       toast.error("Booking error!!!");
     }
-  }, [state.succeeded]);
+  }, [state.succeeded, state.errors, onClose]);
 
   return (
     <div className="w-full min-h-[250px] py-16 bg-[#313131] [#f4f5f7] text-black">
@@ -89,7 +90,7 @@ const Gallery = () => {
               <ModalOverlay />
               <ModalContent>
                 <ModalHeader>
-                  Book a Bus from Lagos (KM 10) to Onitsha
+                  Book a Bus 
                 </ModalHeader>
                 <ModalCloseButton />
                 <ModalBody pb={6}>
@@ -333,7 +334,7 @@ const Gallery = () => {
                       >
                         Book Now
                       </button>
-                      {/* <ToastContainer /> */}
+                      <ToastContainer />
                     </form>
                   </div>
                 </ModalBody>
@@ -474,7 +475,7 @@ const Gallery = () => {
                       >
                         Book Now
                       </button>
-                      {/* <ToastContainer /> */}
+                      <ToastContainer />
                     </form>
                   </div>
                 </ModalBody>
@@ -615,7 +616,7 @@ const Gallery = () => {
                       >
                         Book Now
                       </button>
-                      {/* <ToastContainer /> */}
+                      <ToastContainer />
                     </form>
                   </div>
                 </ModalBody>
@@ -623,6 +624,7 @@ const Gallery = () => {
             </Modal>
           </div>
         </div>
+        
       </div>
     </div>
   );

@@ -75,7 +75,7 @@ const Contact = () => {
           </form>
         </div>
         <div className="contact-form border shadow-lg shadow-[rgb(4,12,22)] flex flex-col gap-2 p-7">
-          <h3 className="text-[#000000] text-2xl font-semibold">SAY HELLO</h3>
+
           <h3 className="text-[#000000] text-2xl font-semibold">CONTACT US</h3>
           <h3 className="text-[#000000] text-2xl font-semibold">
             ANYTIME YOU NEED OUR SERVICES

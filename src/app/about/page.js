@@ -71,7 +71,7 @@ const About = () => {
           <div className="flex flex-col space-y-3">
             <h4 className="font-semibold text-lg">Our Mission</h4>
 
-            <p className="text-sm">
+            <p className="">
               A pioneering force in Nigeria's transportation industry,
               delivering safe, affordable, and environmentally friendly travel
               solutions. We strive to connect people and communities through our
@@ -92,7 +92,7 @@ const About = () => {
           <div className="flex flex-col space-y-3">
             <h4 className="font-semibold text-lg">Our Vision</h4>
 
-            <p className="text-sm">
+            <p className="">
               We aim to be acknowledged by our current and future customers as
               the epitome of excellence in the transportation sector. This
               recognition will be achieved through the adoption of innovative
